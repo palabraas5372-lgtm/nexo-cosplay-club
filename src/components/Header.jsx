@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { Star } from 'lucide-react'
 import Navbar from './Navbar.jsx'
 
-// Mensajes que rotan en la barra superior
+// Barra superior con mensajes que cambian cada 4 segundos.
 const mensajes = [
   'Cosplay para crear, aprender y conocer a tu gente',
   'Próximo evento: Desfile cosplay por el centro · 20 de febrero',
@@ -10,8 +10,8 @@ const mensajes = [
   'Publica tu idea en el tablón y encuentra tu crew',
 ]
 
-const INTERVALO = 4000 // cada cuántos milisegundos cambia el mensaje
-const FUNDIDO = 300 // duración del desvanecido
+const INTERVALO = 4000
+const FUNDIDO = 300
 
 export default function Header({ onJoin, member }) {
   const [indice, setIndice] = useState(0)
@@ -21,15 +21,13 @@ export default function Header({ onJoin, member }) {
   useEffect(() => {
     if (pausado) return
     let cambio
-    // setInterval repite la función cada INTERVALO milisegundos
     const temporizador = setInterval(() => {
-      setVisible(false) // 1. se desvanece el mensaje actual
+      setVisible(false)
       cambio = setTimeout(() => {
-        setIndice(actual => (actual + 1) % mensajes.length) // 2. pasa al siguiente (y vuelve al primero)
-        setVisible(true) // 3. aparece el nuevo
+        setIndice(actual => (actual + 1) % mensajes.length)
+        setVisible(true)
       }, FUNDIDO)
     }, INTERVALO)
-    // limpieza: detiene los temporizadores al pausar o al salir de la página
     return () => {
       clearInterval(temporizador)
       clearTimeout(cambio)

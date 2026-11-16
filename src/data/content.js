@@ -1,16 +1,7 @@
-// TODOS los contenidos de personas, proyectos, convocatorias y actividades son ficticios.
-// Se utilizan exclusivamente para demostrar las funcionalidades del Avance N.º 1.
+// Datos ficticios fijos; creadores y eventos vienen de la API.
 export const roles = ['Todos', 'Costura', 'Props', 'Maquillaje', 'Fotografía', 'Principiante']
 export const ciudades = ['Todas', 'Lima', 'Arequipa', 'Cusco', 'Trujillo', 'Online']
 
-export const creadores = [
-  { id: 'mika', nombre: 'Mika', alias: '@mika.crea', ciudad: 'Lima', rol: 'Props', nivel: 'En proceso', habilidades: ['Foam', 'Pintura', 'Armaduras'], bio: 'Transformo cartón y foam en accesorios. Me gusta documentar mis errores tanto como mis logros.', busca: 'Fotógrafo/a para registrar mi siguiente armadura.', imagen: '/assets/images/creadores/mika.jpg' },
-  { id: 'rin', nombre: 'Rin', alias: '@rin.cose', ciudad: 'Arequipa', rol: 'Costura', nivel: 'Compartiendo', habilidades: ['Patronaje', 'Telas', 'Bordado'], bio: 'Aprendí cosiendo mis propios trajes; ahora comparto trucos que hubiera querido saber al empezar.', busca: 'Personas con quienes intercambiar técnicas de patronaje.', imagen: '/assets/images/creadores/rin.jpg' },
-  { id: 'kai', nombre: 'Kai', alias: '@kai.frames', ciudad: 'Lima', rol: 'Fotografía', nivel: 'Colaborando', habilidades: ['Retratos', 'Edición', 'Luz'], bio: 'Busco contar historias detrás de cada personaje, incluso cuando el cosplay aún está a medio terminar.', busca: 'Cosplayers para sesiones colaborativas de prueba.', imagen: '/assets/images/creadores/kai.jpg' },
-  { id: 'ari', nombre: 'Ari', alias: '@ari.wigs', ciudad: 'Cusco', rol: 'Maquillaje', nivel: 'Aprendiendo', habilidades: ['Pelucas', 'Color', 'Caracterización'], bio: 'Me gusta compartir el antes y después de cada transformación.', busca: 'Consejos de fotografía y personas para practicar looks.', imagen: '/assets/images/creadores/ari.jpg' },
-  { id: 'leo', nombre: 'Leo', alias: '@leo.taller', ciudad: 'Trujillo', rol: 'Props', nivel: 'Compartiendo', habilidades: ['Impresión 3D', 'Pintura', 'Acabados'], bio: 'Si una pieza falla, la volvemos a hacer. Mis proyectos son un laboratorio de pruebas.', busca: 'Gente interesada en proyectos grupales.', imagen: '/assets/images/creadores/leo.jpg' },
-  { id: 'sol', nombre: 'Sol', alias: '@sol.empieza', ciudad: 'Online', rol: 'Principiante', nivel: 'Mi primer cosplay', habilidades: ['Bocetos', 'Aprendizaje', 'Ideas'], bio: 'Estoy preparando mi primer cosplay y busco una comunidad donde se pueda preguntar sin vergüenza.', busca: 'Una persona que me oriente con materiales económicos.', imagen: '/assets/images/creadores/sol.jpg' },
-]
 
 export const convocatorias = [
   { id: 'c1', titulo: 'Busco fotógrafo/a para sesión de armadura', categoria: 'Fotografía', ciudad: 'Lima', modalidad: 'Presencial', autor: 'Mika', detalle: 'Quiero documentar el proceso completo de una armadura hecha con foam. Podemos coordinar una sesión sencilla al aire libre.', etiquetas: ['Sesión', 'Colaboración', 'Principiantes bienvenidos'] },
@@ -19,11 +10,6 @@ export const convocatorias = [
   { id: 'c4', titulo: 'Consejos para mis primeros props', categoria: 'Props', ciudad: 'Online', modalidad: 'Virtual', autor: 'Sol', detalle: 'Estoy probando materiales económicos para un accesorio y me vendrían bien ideas de otras personas.', etiquetas: ['Foam', 'Primera vez'] },
 ]
 
-export const eventos = [
-  { id: 'e1', titulo: 'Desfile cosplay por el centro', fecha: '2027-02-20', hora: '15:00', ciudad: 'Lima', modalidad: 'Encuentro', descripcion: 'Un recorrido en grupo con tus personajes favoritos, fotos espontáneas y mucha buena onda. Todos los niveles son bienvenidos.', imagen: '/assets/images/eventos/e1.jpg' },
-  { id: 'e2', titulo: 'Photo walk urbano de superhéroes', fecha: '2027-03-13', hora: '11:00', ciudad: 'Lima', modalidad: 'Salida', descripcion: 'Azoteas, muros y calles como escenario. Practica poses de acción y encuadres junto a fotógrafos del club.', imagen: '/assets/images/eventos/e2.jpg' },
-  { id: 'e3', titulo: 'Taller de fotografía nocturna', fecha: '2027-04-10', hora: '18:00', ciudad: 'Arequipa', modalidad: 'Taller', descripcion: 'Aprende a usar luces bajas, sombras y escaleras para crear retratos de cosplay con ambiente de película.', imagen: '/assets/images/eventos/e3.jpg' },
-]
 
 export const proyectos = [
   { id: 'armadura-foam', titulo: 'Mi primera armadura ligera', autor: 'Mika', estado: 'En proceso', categoria: 'Props', resumen: 'Aprender a construir una pieza grande sin gastar demasiado.', imagen: '/assets/images/proyectos/armadura-foam.jpg', pasos: [{titulo:'Boceto',detalle:'Separar la idea en piezas pequeñas y medibles.'},{titulo:'Prueba de materiales',detalle:'Elegir foam según peso y flexibilidad.'},{titulo:'Montaje',detalle:'Unir, ajustar y preparar la pieza para pintura.'}] },

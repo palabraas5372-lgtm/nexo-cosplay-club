@@ -10,7 +10,7 @@ export function useLocalStorage(key, initialValue) {
     }
   })
   useEffect(() => {
-    try { window.localStorage.setItem(key, JSON.stringify(value)) } catch { /* almacenamiento no disponible */ }
+    try { window.localStorage.setItem(key, JSON.stringify(value)) } catch { }
   }, [key, value])
   return [value, setValue]
 }

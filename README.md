@@ -15,6 +15,15 @@ npm install
 npm run dev
 ```
 
+Con la API simulada (JSON Server), en dos terminales:
+
+```bash
+npm run api   # terminal 1: JSON Server en http://localhost:3001
+npm run dev   # terminal 2: la web en http://localhost:5173
+```
+
+Si `npm run api` no está encendido, la web usa la copia estática `public/api/*.json` (es la que se usa en Vercel).
+
 Verificar el build:
 
 ```bash
@@ -39,6 +48,14 @@ npm run build
 
 Las fotos se colocan en `public/assets/images/` con los nombres listados en `public/assets/images/README.md`.
 El componente `src/components/ImageSlot.jsx` muestra la foto si existe; si falta, muestra el marcador de `public/assets/placeholders/` con la etiqueta "FOTO POR DEFINIR".
+
+## API
+
+- `db.json`: base de datos de JSON Server con `creadores` (12) y `eventos` (3).
+- `src/services/api.js`: funciones `obtenerTodos` y `obtenerUno` con `fetch`.
+- `src/hooks/useApi.js`: hook con `useState` y `useEffect` que maneja carga, error y reintento.
+- `src/components/EstadoCarga.jsx`: mensaje de carga y de error con botón «Reintentar».
+- `scripts/generar-api.mjs`: copia `db.json` a `public/api/` antes de `dev` y `build`.
 
 ## Datos de demostración
 

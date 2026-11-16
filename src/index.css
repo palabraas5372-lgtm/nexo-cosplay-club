@@ -28,7 +28,7 @@ a { text-decoration: none; }
 :focus-visible { outline: 3px solid #FF644D; outline-offset: 3px; }
 }
 
-/* Clases propias dentro de "components" para que las utilidades de Tailwind (hidden, w-full, mt-3...) puedan sobrescribirlas */
+/* Clases propias que Tailwind puede sobrescribir. */
 @layer components {
 .container-nexo { width: min(1160px, calc(100% - 40px)); margin-inline: auto; }
 .font-display { font-family: 'Bricolage Grotesque', 'DM Sans', sans-serif; }

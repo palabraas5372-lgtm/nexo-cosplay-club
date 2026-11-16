@@ -5,3 +5,6 @@ dist/
 .DS_Store
 .vscode/
 *.log
+
+# API estática generada desde db.json
+public/api/

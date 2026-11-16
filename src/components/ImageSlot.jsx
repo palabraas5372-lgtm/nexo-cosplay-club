@@ -7,7 +7,7 @@ const defaults = {
   evento: '/assets/placeholders/evento.svg',
 }
 
-// Muestra la foto real si existe; si falta o no carga, muestra el marcador con su etiqueta.
+// Muestra la foto o un marcador si falta.
 export default function ImageSlot({ tipo = 'proyecto', src, alt = '', className = '', label = 'FOTO POR DEFINIR', loading = 'lazy' }) {
   const [failed, setFailed] = useState(false)
   const usePlaceholder = !src || failed
