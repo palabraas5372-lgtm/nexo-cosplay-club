@@ -1,6 +1,6 @@
 // Datos ficticios fijos; creadores y eventos vienen de la API.
 export const roles = ['Todos', 'Costura', 'Props', 'Maquillaje', 'Fotografía', 'Principiante']
-export const ciudades = ['Todas', 'Lima', 'Arequipa', 'Cusco', 'Trujillo', 'Online']
+export const ciudades = ['Todas', 'Lima', 'Arequipa', 'Cusco', 'Trujillo', 'Piura', 'Chiclayo', 'Online']
 
 
 export const convocatorias = [

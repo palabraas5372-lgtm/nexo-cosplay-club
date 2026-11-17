@@ -19,7 +19,7 @@ import NotFound from './pages/NotFound.jsx'
 
 export default function App() {
   const [joinOpen, setJoinOpen] = useState(false)
-  const [member, setMember] = useLocalStorage('nexo_club_member_v2', null)
+  const [member, setMember] = useLocalStorage('nexo_club_member_v3', null)
   const [savedCreators, setSavedCreators] = useLocalStorage('nexo_club_creators_v2', [])
   const [savedEvents, setSavedEvents] = useLocalStorage('nexo_club_events_v2', [])
   const [savedCollabs, setSavedCollabs] = useLocalStorage('nexo_club_collabs_v2', [])
@@ -35,7 +35,7 @@ export default function App() {
     <main id="main-content" className="min-h-[52vh]"><Routes>
       <Route path="/" element={<Home onJoin={onJoin} savedCreators={savedCreators} toggleCreator={toggleCreator} savedEvents={savedEvents} toggleEvent={toggleEvent} savedCollabs={savedCollabs} toggleCollab={toggleCollab}/>}/>
       <Route path="/comunidad" element={<Comunidad savedCreators={savedCreators} toggleCreator={toggleCreator} member={member} onJoin={onJoin}/>}/>
-      <Route path="/comunidad/:id" element={<CreatorDetail savedCreators={savedCreators} toggleCreator={toggleCreator}/>}/>
+      <Route path="/comunidad/:id" element={<CreatorDetail savedCreators={savedCreators} toggleCreator={toggleCreator} member={member} onJoin={onJoin}/>}/>
       <Route path="/colaboraciones" element={<Colaboraciones savedCollabs={savedCollabs} toggleCollab={toggleCollab} ownPosts={ownPosts} setOwnPosts={setOwnPosts} member={member} onJoin={onJoin}/>}/>
       <Route path="/eventos" element={<Eventos savedEvents={savedEvents} toggleEvent={toggleEvent}/>}/>
       <Route path="/proyectos" element={<Proyectos/>}/>
