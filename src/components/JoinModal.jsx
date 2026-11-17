@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { CheckCircle2, X, PencilLine, ImagePlus, AtSign, MapPin, ArrowUpRight } from 'lucide-react'
 
 // Formulario para crear la tarjeta de miembro que aparece en el directorio.
-const ciudades = ['Lima', 'Arequipa', 'Cusco', 'Trujillo', 'Piura', 'Chiclayo', 'Online']
+const ciudades = ['Tokio', 'Seúl', 'Los Ángeles', 'Ciudad de México', 'São Paulo', 'Madrid', 'Londres', 'Lima', 'Online']
 const roles = ['Costura', 'Props', 'Maquillaje', 'Fotografía', 'Principiante']
 const niveles = ['Mi primer cosplay', 'Aprendiendo', 'En proceso', 'Compartiendo', 'Colaborando']
 const habilidadesDisponibles = ['Foam', 'Armaduras', 'Pintura', 'Impresión 3D', 'Patronaje', 'Telas', 'Bordado', 'Pelucas', 'Maquillaje', 'Retratos', 'Edición', 'Poses', 'Bocetos', 'Accesorios']

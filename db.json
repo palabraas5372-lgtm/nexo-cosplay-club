@@ -4,7 +4,7 @@
       "id": "mika",
       "nombre": "Mika",
       "alias": "@mika.crea",
-      "ciudad": "Lima",
+      "ciudad": "Tokio",
       "rol": "Props",
       "nivel": "En proceso",
       "habilidades": [
@@ -20,7 +20,7 @@
       "id": "rin",
       "nombre": "Rin",
       "alias": "@rin.cose",
-      "ciudad": "Arequipa",
+      "ciudad": "Madrid",
       "rol": "Costura",
       "nivel": "Compartiendo",
       "habilidades": [
@@ -36,7 +36,7 @@
       "id": "kai",
       "nombre": "Kai",
       "alias": "@kai.frames",
-      "ciudad": "Lima",
+      "ciudad": "Los Ángeles",
       "rol": "Fotografía",
       "nivel": "Colaborando",
       "habilidades": [
@@ -52,7 +52,7 @@
       "id": "ari",
       "nombre": "Ari",
       "alias": "@ari.wigs",
-      "ciudad": "Cusco",
+      "ciudad": "Seúl",
       "rol": "Maquillaje",
       "nivel": "Aprendiendo",
       "habilidades": [
@@ -68,7 +68,7 @@
       "id": "leo",
       "nombre": "Leo",
       "alias": "@leo.taller",
-      "ciudad": "Trujillo",
+      "ciudad": "Lima",
       "rol": "Props",
       "nivel": "Compartiendo",
       "habilidades": [
@@ -100,7 +100,7 @@
       "id": "vale",
       "nombre": "Vale",
       "alias": "@vale.armor",
-      "ciudad": "Lima",
+      "ciudad": "Ciudad de México",
       "rol": "Props",
       "nivel": "Compartiendo",
       "habilidades": [
@@ -116,7 +116,7 @@
       "id": "nao",
       "nombre": "Nao",
       "alias": "@nao.scythe",
-      "ciudad": "Arequipa",
+      "ciudad": "São Paulo",
       "rol": "Props",
       "nivel": "Colaborando",
       "habilidades": [
@@ -132,7 +132,7 @@
       "id": "vikingos",
       "nombre": "Bruno y Teo",
       "alias": "@vikingos.crew",
-      "ciudad": "Cusco",
+      "ciudad": "Londres",
       "rol": "Costura",
       "nivel": "Compartiendo",
       "habilidades": [
@@ -148,7 +148,7 @@
       "id": "luna",
       "nombre": "Luna",
       "alias": "@luna.morada",
-      "ciudad": "Trujillo",
+      "ciudad": "Ciudad de México",
       "rol": "Principiante",
       "nivel": "Mi primer cosplay",
       "habilidades": [
@@ -164,7 +164,7 @@
       "id": "mei",
       "nombre": "Mei",
       "alias": "@mei.hanfu",
-      "ciudad": "Lima",
+      "ciudad": "Seúl",
       "rol": "Costura",
       "nivel": "Colaborando",
       "habilidades": [
@@ -199,7 +199,7 @@
       "titulo": "Desfile cosplay por el centro",
       "fecha": "2027-02-20",
       "hora": "15:00",
-      "ciudad": "Lima",
+      "ciudad": "Ciudad de México",
       "modalidad": "Encuentro",
       "descripcion": "Un recorrido en grupo con tus personajes favoritos, fotos espontáneas y mucha buena onda. Todos los niveles son bienvenidos.",
       "imagen": "/assets/images/eventos/e1.jpg"
@@ -209,7 +209,7 @@
       "titulo": "Photo walk urbano de superhéroes",
       "fecha": "2027-03-13",
       "hora": "11:00",
-      "ciudad": "Lima",
+      "ciudad": "Los Ángeles",
       "modalidad": "Salida",
       "descripcion": "Azoteas, muros y calles como escenario. Practica poses de acción y encuadres junto a fotógrafos del club.",
       "imagen": "/assets/images/eventos/e2.jpg"
@@ -219,7 +219,7 @@
       "titulo": "Taller de fotografía nocturna",
       "fecha": "2027-04-10",
       "hora": "18:00",
-      "ciudad": "Arequipa",
+      "ciudad": "Londres",
       "modalidad": "Taller",
       "descripcion": "Aprende a usar luces bajas, sombras y escaleras para crear retratos de cosplay con ambiente de película.",
       "imagen": "/assets/images/eventos/e3.jpg"

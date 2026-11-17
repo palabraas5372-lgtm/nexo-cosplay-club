@@ -1,12 +1,12 @@
 // Datos ficticios fijos; creadores y eventos vienen de la API.
 export const roles = ['Todos', 'Costura', 'Props', 'Maquillaje', 'Fotografía', 'Principiante']
-export const ciudades = ['Todas', 'Lima', 'Arequipa', 'Cusco', 'Trujillo', 'Piura', 'Chiclayo', 'Online']
+export const ciudades = ['Todas', 'Tokio', 'Seúl', 'Los Ángeles', 'Ciudad de México', 'São Paulo', 'Madrid', 'Londres', 'Lima', 'Online']
 
 
 export const convocatorias = [
-  { id: 'c1', titulo: 'Busco fotógrafo/a para sesión de armadura', categoria: 'Fotografía', ciudad: 'Lima', modalidad: 'Presencial', autor: 'Mika', detalle: 'Quiero documentar el proceso completo de una armadura hecha con foam. Podemos coordinar una sesión sencilla al aire libre.', etiquetas: ['Sesión', 'Colaboración', 'Principiantes bienvenidos'] },
+  { id: 'c1', titulo: 'Busco fotógrafo/a para sesión de armadura', categoria: 'Fotografía', ciudad: 'Tokio', modalidad: 'Presencial', autor: 'Mika', detalle: 'Quiero documentar el proceso completo de una armadura hecha con foam. Podemos coordinar una sesión sencilla al aire libre.', etiquetas: ['Sesión', 'Colaboración', 'Principiantes bienvenidos'] },
   { id: 'c2', titulo: 'Club de costura: aprendamos patrones', categoria: 'Costura', ciudad: 'Online', modalidad: 'Virtual', autor: 'Rin', detalle: 'Una reunión online para compartir cómo sacar patrones de prendas sencillas y resolver dudas entre todos.', etiquetas: ['Aprendizaje', 'Costura'] },
-  { id: 'c3', titulo: 'Armemos un grupo para una convención', categoria: 'Grupo', ciudad: 'Arequipa', modalidad: 'Presencial', autor: 'Ari', detalle: 'La idea es organizar un grupo pequeño de personajes originales, sin presión por el nivel de experiencia.', etiquetas: ['Grupo', 'Evento', 'Ideas'] },
+  { id: 'c3', titulo: 'Armemos un grupo para una convención', categoria: 'Grupo', ciudad: 'Seúl', modalidad: 'Presencial', autor: 'Ari', detalle: 'La idea es organizar un grupo pequeño de personajes originales, sin presión por el nivel de experiencia.', etiquetas: ['Grupo', 'Evento', 'Ideas'] },
   { id: 'c4', titulo: 'Consejos para mis primeros props', categoria: 'Props', ciudad: 'Online', modalidad: 'Virtual', autor: 'Sol', detalle: 'Estoy probando materiales económicos para un accesorio y me vendrían bien ideas de otras personas.', etiquetas: ['Foam', 'Primera vez'] },
 ]
 

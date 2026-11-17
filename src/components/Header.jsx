@@ -5,7 +5,7 @@ import Navbar from './Navbar.jsx'
 // Barra superior con mensajes que cambian cada 4 segundos.
 const mensajes = [
   'Cosplay para crear, aprender y conocer a tu gente',
-  'Próximo evento: Desfile cosplay por el centro · 20 de febrero',
+  'Próximo evento: Desfile cosplay en Ciudad de México · 20 de febrero',
   '¿Tu primera vez? Revisa nuestras guías para empezar',
   'Publica tu idea en el tablón y encuentra tu crew',
 ]
