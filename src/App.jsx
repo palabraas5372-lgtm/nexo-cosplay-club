@@ -24,29 +24,89 @@ export default function App() {
   const [savedEvents, setSavedEvents] = useLocalStorage('nexo_club_events_v2', [])
   const [savedCollabs, setSavedCollabs] = useLocalStorage('nexo_club_collabs_v2', [])
   const [ownPosts, setOwnPosts] = useLocalStorage('nexo_club_own_posts_v2', [])
-  const toggle = setter => id => setter(previous => previous.includes(id) ? previous.filter(x => x !== id) : [...previous, id])
+  const toggle = (setter) => (id) =>
+    setter((previous) =>
+      previous.includes(id) ? previous.filter((x) => x !== id) : [...previous, id]
+    )
   const toggleCreator = toggle(setSavedCreators)
   const toggleEvent = toggle(setSavedEvents)
   const toggleCollab = toggle(setSavedCollabs)
   const onJoin = () => setJoinOpen(true)
-  return <div className="min-h-screen bg-paper text-ink">
-    <ScrollToTop/>
-    <Header onJoin={onJoin} member={member}/>
-    <main id="main-content" className="min-h-[52vh]"><Routes>
-      <Route path="/" element={<Home onJoin={onJoin} savedCreators={savedCreators} toggleCreator={toggleCreator} savedEvents={savedEvents} toggleEvent={toggleEvent} savedCollabs={savedCollabs} toggleCollab={toggleCollab}/>}/>
-      <Route path="/comunidad" element={<Comunidad savedCreators={savedCreators} toggleCreator={toggleCreator} member={member} onJoin={onJoin}/>}/>
-      <Route path="/comunidad/:id" element={<CreatorDetail savedCreators={savedCreators} toggleCreator={toggleCreator} member={member} onJoin={onJoin}/>}/>
-      <Route path="/colaboraciones" element={<Colaboraciones savedCollabs={savedCollabs} toggleCollab={toggleCollab} ownPosts={ownPosts} setOwnPosts={setOwnPosts} member={member} onJoin={onJoin}/>}/>
-      <Route path="/eventos" element={<Eventos savedEvents={savedEvents} toggleEvent={toggleEvent}/>}/>
-      <Route path="/proyectos" element={<Proyectos/>}/>
-      <Route path="/proyectos/:id" element={<ProjectDetail/>}/>
-      <Route path="/galeria" element={<Navigate to="/proyectos" replace/>}/>
-      <Route path="/recursos" element={<Recursos/>}/>
-      <Route path="/nosotros" element={<Nosotros onJoin={onJoin}/>}/>
-      <Route path="/contacto" element={<Contacto/>}/>
-      <Route path="*" element={<NotFound/>}/>
-    </Routes></main>
-    <Footer/>
-    <JoinModal open={joinOpen} onClose={()=>setJoinOpen(false)} member={member} onSave={setMember}/>
-  </div>
+  return (
+    <div className="min-h-screen bg-paper text-ink">
+      <ScrollToTop />
+      <Header onJoin={onJoin} member={member} />
+      <main id="main-content" className="min-h-[52vh]">
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Home
+                onJoin={onJoin}
+                savedCreators={savedCreators}
+                toggleCreator={toggleCreator}
+                savedEvents={savedEvents}
+                toggleEvent={toggleEvent}
+                savedCollabs={savedCollabs}
+                toggleCollab={toggleCollab}
+              />
+            }
+          />
+          <Route
+            path="/comunidad"
+            element={
+              <Comunidad
+                savedCreators={savedCreators}
+                toggleCreator={toggleCreator}
+                member={member}
+                onJoin={onJoin}
+              />
+            }
+          />
+          <Route
+            path="/comunidad/:id"
+            element={
+              <CreatorDetail
+                savedCreators={savedCreators}
+                toggleCreator={toggleCreator}
+                member={member}
+                onJoin={onJoin}
+              />
+            }
+          />
+          <Route
+            path="/colaboraciones"
+            element={
+              <Colaboraciones
+                savedCollabs={savedCollabs}
+                toggleCollab={toggleCollab}
+                ownPosts={ownPosts}
+                setOwnPosts={setOwnPosts}
+                member={member}
+                onJoin={onJoin}
+              />
+            }
+          />
+          <Route
+            path="/eventos"
+            element={<Eventos savedEvents={savedEvents} toggleEvent={toggleEvent} />}
+          />
+          <Route path="/proyectos" element={<Proyectos />} />
+          <Route path="/proyectos/:id" element={<ProjectDetail />} />
+          <Route path="/galeria" element={<Navigate to="/proyectos" replace />} />
+          <Route path="/recursos" element={<Recursos />} />
+          <Route path="/nosotros" element={<Nosotros onJoin={onJoin} />} />
+          <Route path="/contacto" element={<Contacto />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </main>
+      <Footer />
+      <JoinModal
+        open={joinOpen}
+        onClose={() => setJoinOpen(false)}
+        member={member}
+        onSave={setMember}
+      />
+    </div>
+  )
 }

@@ -24,7 +24,7 @@ export default function Header({ onJoin, member }) {
     const temporizador = setInterval(() => {
       setVisible(false)
       cambio = setTimeout(() => {
-        setIndice(actual => (actual + 1) % mensajes.length)
+        setIndice((actual) => (actual + 1) % mensajes.length)
         setVisible(true)
       }, FUNDIDO)
     }, INTERVALO)
@@ -34,18 +34,23 @@ export default function Header({ onJoin, member }) {
     }
   }, [pausado])
 
-  return <header className="sticky top-0 z-40 border-b-2 border-ink bg-paper/95 backdrop-blur-lg">
-    <div
-      className="border-b border-ink bg-mint py-1.5 text-center text-[10px] font-extrabold uppercase tracking-[.15em] sm:text-[11px]"
-      onMouseEnter={() => setPausado(true)}
-      onMouseLeave={() => setPausado(false)}
-    >
-      <p aria-live="polite" className={`transition-opacity duration-300 ${visible ? 'opacity-100' : 'opacity-0'}`}>
-        <Star size={11} className="mr-2 inline fill-current" aria-hidden="true"/>
-        {mensajes[indice]}
-        <Star size={11} className="ml-2 inline fill-current" aria-hidden="true"/>
-      </p>
-    </div>
-    <Navbar onJoin={onJoin} member={member}/>
-  </header>
+  return (
+    <header className="sticky top-0 z-40 border-b-2 border-ink bg-paper/95 backdrop-blur-lg">
+      <div
+        className="border-b border-ink bg-mint py-1.5 text-center text-[10px] font-extrabold uppercase tracking-[.15em] sm:text-[11px]"
+        onMouseEnter={() => setPausado(true)}
+        onMouseLeave={() => setPausado(false)}
+      >
+        <p
+          aria-live="polite"
+          className={`transition-opacity duration-300 ${visible ? 'opacity-100' : 'opacity-0'}`}
+        >
+          <Star size={11} className="mr-2 inline fill-current" aria-hidden="true" />
+          {mensajes[indice]}
+          <Star size={11} className="ml-2 inline fill-current" aria-hidden="true" />
+        </p>
+      </div>
+      <Navbar onJoin={onJoin} member={member} />
+    </header>
+  )
 }

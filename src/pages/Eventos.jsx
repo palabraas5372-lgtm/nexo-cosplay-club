@@ -5,14 +5,83 @@ import EventCard from '../components/EventCard.jsx'
 import EstadoCarga from '../components/EstadoCarga.jsx'
 import { obtenerTodos } from '../services/api.js'
 import { useApi } from '../hooks/useApi.js'
-export default function Eventos({savedEvents,toggleEvent}) {
+export default function Eventos({ savedEvents, toggleEvent }) {
   const { datos: eventos, cargando, error, reintentar } = useApi(() => obtenerTodos('eventos'))
-  const [savedOnly,setSavedOnly] = useState(false)
-  const [kind,setKind] = useState('Todos')
-  const filtered = useMemo(()=>(eventos ?? []).filter(e=>(kind==='Todos'||e.modalidad===kind)&&(!savedOnly||savedEvents.includes(e.id))),[eventos,kind,savedOnly,savedEvents])
-  return <><PageIntro eyebrow="Agenda del club" title="Encuéntranos fuera de la pantalla." description="Talleres, encuentros y salidas para vivir el cosplay en comunidad. Guarda los que te interesen en tu agenda." bg="bg-sun"/>
-    <section className="section-space"><div className="container-nexo"><div className="mb-7 flex flex-wrap items-center gap-2">{['Todos','Encuentro','Taller','Salida'].map(t=><button key={t} className="filter-chip" aria-pressed={kind===t} onClick={()=>setKind(t)}>{t}</button>)}<button className={`ml-auto flex items-center gap-2 rounded-full border-2 border-ink px-4 py-2.5 text-xs font-extrabold ${savedOnly?'bg-mint':'bg-white'}`} aria-pressed={savedOnly} onClick={()=>setSavedOnly(p=>!p)}><Bookmark size={15}/> Mi agenda ({savedEvents.length})</button></div>
-      {(cargando || error) ? <EstadoCarga cargando={cargando} error={error} onReintentar={reintentar} texto="Cargando eventos..."/> : filtered.length?<div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">{filtered.map(e=><EventCard key={e.id} evento={e} saved={savedEvents.includes(e.id)} onToggle={toggleEvent}/>)}</div>:<div className="card-soft py-14 text-center"><CalendarDays className="mx-auto text-coral" size={40}/><h2 className="font-display mt-3 text-2xl font-extrabold">Tu agenda está vacía</h2><p className="mt-2 text-subtle">Prueba con otra categoría o guarda una actividad.</p><button className="btn-outline mt-5" onClick={()=>{setKind('Todos');setSavedOnly(false)}}>Explorar todas</button></div>}
-      
-    </div></section></>
+  const [savedOnly, setSavedOnly] = useState(false)
+  const [kind, setKind] = useState('Todos')
+  const filtered = useMemo(
+    () =>
+      (eventos ?? []).filter(
+        (e) =>
+          (kind === 'Todos' || e.modalidad === kind) && (!savedOnly || savedEvents.includes(e.id))
+      ),
+    [eventos, kind, savedOnly, savedEvents]
+  )
+  return (
+    <>
+      <PageIntro
+        eyebrow="Agenda del club"
+        title="Encuéntranos fuera de la pantalla."
+        description="Talleres, encuentros y salidas para vivir el cosplay en comunidad. Guarda los que te interesen en tu agenda."
+        bg="bg-sun"
+      />
+      <section className="section-space">
+        <div className="container-nexo">
+          <div className="mb-7 flex flex-wrap items-center gap-2">
+            {['Todos', 'Encuentro', 'Taller', 'Salida'].map((t) => (
+              <button
+                key={t}
+                className="filter-chip"
+                aria-pressed={kind === t}
+                onClick={() => setKind(t)}
+              >
+                {t}
+              </button>
+            ))}
+            <button
+              className={`ml-auto flex items-center gap-2 rounded-full border-2 border-ink px-4 py-2.5 text-xs font-extrabold ${savedOnly ? 'bg-mint' : 'bg-white'}`}
+              aria-pressed={savedOnly}
+              onClick={() => setSavedOnly((p) => !p)}
+            >
+              <Bookmark size={15} /> Mi agenda ({savedEvents.length})
+            </button>
+          </div>
+          {cargando || error ? (
+            <EstadoCarga
+              cargando={cargando}
+              error={error}
+              onReintentar={reintentar}
+              texto="Cargando eventos..."
+            />
+          ) : filtered.length ? (
+            <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+              {filtered.map((e) => (
+                <EventCard
+                  key={e.id}
+                  evento={e}
+                  saved={savedEvents.includes(e.id)}
+                  onToggle={toggleEvent}
+                />
+              ))}
+            </div>
+          ) : (
+            <div className="card-soft py-14 text-center">
+              <CalendarDays className="mx-auto text-coral" size={40} />
+              <h2 className="font-display mt-3 text-2xl font-extrabold">Tu agenda está vacía</h2>
+              <p className="mt-2 text-subtle">Prueba con otra categoría o guarda una actividad.</p>
+              <button
+                className="btn-outline mt-5"
+                onClick={() => {
+                  setKind('Todos')
+                  setSavedOnly(false)
+                }}
+              >
+                Explorar todas
+              </button>
+            </div>
+          )}
+        </div>
+      </section>
+    </>
+  )
 }

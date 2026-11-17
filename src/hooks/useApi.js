@@ -14,12 +14,20 @@ export function useApi(pedirDatos, dependencias = []) {
     setCargando(true)
     setError(null)
     pedir()
-      .then(resultado => { if (activo) setDatos(resultado) })
-      .catch(err => { if (activo) setError(err.message) })
-      .finally(() => { if (activo) setCargando(false) })
-    return () => { activo = false }
+      .then((resultado) => {
+        if (activo) setDatos(resultado)
+      })
+      .catch((err) => {
+        if (activo) setError(err.message)
+      })
+      .finally(() => {
+        if (activo) setCargando(false)
+      })
+    return () => {
+      activo = false
+    }
   }, [pedir, intento])
 
-  const reintentar = () => setIntento(n => n + 1)
+  const reintentar = () => setIntento((n) => n + 1)
   return { datos, cargando, error, reintentar }
 }

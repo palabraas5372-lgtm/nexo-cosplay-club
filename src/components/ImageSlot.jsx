@@ -8,12 +8,24 @@ const defaults = {
 }
 
 // Muestra la foto o un marcador si falta.
-export default function ImageSlot({ tipo = 'proyecto', src, alt = '', className = '', label = 'FOTO POR DEFINIR', loading = 'lazy' }) {
+export default function ImageSlot({
+  tipo = 'proyecto',
+  src,
+  alt = '',
+  className = '',
+  label = 'FOTO POR DEFINIR',
+  loading = 'lazy',
+}) {
   const [failed, setFailed] = useState(false)
   const usePlaceholder = !src || failed
   return (
     <div className={`image-frame ${className}`}>
-      <img src={usePlaceholder ? defaults[tipo] : src} alt={alt} loading={loading} onError={() => setFailed(true)} />
+      <img
+        src={usePlaceholder ? defaults[tipo] : src}
+        alt={alt}
+        loading={loading}
+        onError={() => setFailed(true)}
+      />
       {usePlaceholder && <span className="image-label">{label}</span>}
     </div>
   )

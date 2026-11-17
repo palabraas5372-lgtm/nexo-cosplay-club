@@ -1,9 +1,89 @@
 import { Link } from 'react-router-dom'
 import { ArrowUpRight, Handshake, Lightbulb, Users, HeartHandshake } from 'lucide-react'
 import ImageSlot from '../components/ImageSlot.jsx'
-const values=[{icon:Lightbulb,title:'Aprender sin compararse',text:'El progreso de alguien no invalida tus primeros pasos. Preguntar también es crear.',bg:'bg-sun'},{icon:Handshake,title:'Colaborar con respeto',text:'Reconocer el trabajo de fotógrafos, cosplayers, makers y cada persona que participa.',bg:'bg-mint'},{icon:HeartHandshake,title:'Compartir con consentimiento',text:'Respetar límites, créditos y permisos, sobre todo al tomar y publicar fotografías.',bg:'bg-rose'}]
-export default function Nosotros({onJoin}){
- return <><section className="section-space border-b-2 border-ink bg-sky/50"><div className="container-nexo grid items-center gap-9 lg:grid-cols-[1fr_.9fr]"><div><span className="kicker">Por qué existe NEXO</span><h1 className="font-display mt-5 text-5xl font-extrabold leading-[1.03] tracking-[-.06em] sm:text-6xl">No es un concurso de quién hace el mejor traje.</h1><p className="mt-6 max-w-xl text-base leading-8">NEXO es un club digital que busca facilitar algo simple: encontrar compañía, recursos y oportunidades para hacer cosplay. La idea nació de ver que muchas personas comienzan sin saber a quién preguntar.</p><div className="mt-7 flex flex-wrap gap-3"><Link to="/colaboraciones" className="btn-primary">Explorar propuestas <ArrowUpRight size={18}/></Link><button type="button" onClick={onJoin} className="btn-light"><Users size={17}/> Mi tarjeta</button></div></div><ImageSlot tipo="hero" src="/assets/images/nosotros.jpg" className="card-paper aspect-[5/4] overflow-hidden rotate-[2deg]" alt="Grupo de amigos haciendo cosplay juntos en una convención"/></div></section>
-  <section className="section-space"><div className="container-nexo"><div className="max-w-3xl"><span className="kicker">Nuestros acuerdos</span><h2 className="font-display mt-4 text-4xl font-extrabold sm:text-5xl">Aquí hay lugar para todos los niveles.</h2></div><div className="mt-9 grid gap-5 md:grid-cols-3">{values.map(v=><article key={v.title} className="card-paper p-7"><div className={`sticker inline-flex h-15 w-15 items-center justify-center rounded-2xl ${v.bg}`}><v.icon size={27}/></div><h3 className="font-display mt-7 text-2xl font-extrabold">{v.title}</h3><p className="mt-3 text-sm leading-7 text-subtle">{v.text}</p></article>)}</div><div className="mt-12 rounded-[25px] border-2 border-ink bg-sun p-7 sm:p-9"><h2 className="font-display text-3xl font-extrabold">Hecho por fans, para fans.</h2><p className="mt-3 max-w-3xl text-sm leading-8">NEXO nació de una idea simple: que nadie tenga que empezar su primer cosplay sin saber a quién preguntar. Aquí se comparte lo que sabes, se aprende de otros y se celebra el proceso tanto como el resultado.</p></div></div></section>
- </>
+const values = [
+  {
+    icon: Lightbulb,
+    title: 'Aprender sin compararse',
+    text: 'El progreso de alguien no invalida tus primeros pasos. Preguntar también es crear.',
+    bg: 'bg-sun',
+  },
+  {
+    icon: Handshake,
+    title: 'Colaborar con respeto',
+    text: 'Reconocer el trabajo de fotógrafos, cosplayers, makers y cada persona que participa.',
+    bg: 'bg-mint',
+  },
+  {
+    icon: HeartHandshake,
+    title: 'Compartir con consentimiento',
+    text: 'Respetar límites, créditos y permisos, sobre todo al tomar y publicar fotografías.',
+    bg: 'bg-rose',
+  },
+]
+export default function Nosotros({ onJoin }) {
+  return (
+    <>
+      <section className="section-space border-b-2 border-ink bg-sky/50">
+        <div className="container-nexo grid items-center gap-9 lg:grid-cols-[1fr_.9fr]">
+          <div>
+            <span className="kicker">Por qué existe NEXO</span>
+            <h1 className="font-display mt-5 text-5xl font-extrabold leading-[1.03] tracking-[-.06em] sm:text-6xl">
+              No es un concurso de quién hace el mejor traje.
+            </h1>
+            <p className="mt-6 max-w-xl text-base leading-8">
+              NEXO es un club digital que busca facilitar algo simple: encontrar compañía, recursos
+              y oportunidades para hacer cosplay. La idea nació de ver que muchas personas comienzan
+              sin saber a quién preguntar.
+            </p>
+            <div className="mt-7 flex flex-wrap gap-3">
+              <Link to="/colaboraciones" className="btn-primary">
+                Explorar propuestas <ArrowUpRight size={18} />
+              </Link>
+              <button type="button" onClick={onJoin} className="btn-light">
+                <Users size={17} /> Mi tarjeta
+              </button>
+            </div>
+          </div>
+          <ImageSlot
+            tipo="hero"
+            src="/assets/images/nosotros.jpg"
+            className="card-paper aspect-[5/4] overflow-hidden rotate-[2deg]"
+            alt="Grupo de amigos haciendo cosplay juntos en una convención"
+          />
+        </div>
+      </section>
+      <section className="section-space">
+        <div className="container-nexo">
+          <div className="max-w-3xl">
+            <span className="kicker">Nuestros acuerdos</span>
+            <h2 className="font-display mt-4 text-4xl font-extrabold sm:text-5xl">
+              Aquí hay lugar para todos los niveles.
+            </h2>
+          </div>
+          <div className="mt-9 grid gap-5 md:grid-cols-3">
+            {values.map((v) => (
+              <article key={v.title} className="card-paper p-7">
+                <div
+                  className={`sticker inline-flex h-15 w-15 items-center justify-center rounded-2xl ${v.bg}`}
+                >
+                  <v.icon size={27} />
+                </div>
+                <h3 className="font-display mt-7 text-2xl font-extrabold">{v.title}</h3>
+                <p className="mt-3 text-sm leading-7 text-subtle">{v.text}</p>
+              </article>
+            ))}
+          </div>
+          <div className="mt-12 rounded-[25px] border-2 border-ink bg-sun p-7 sm:p-9">
+            <h2 className="font-display text-3xl font-extrabold">Hecho por fans, para fans.</h2>
+            <p className="mt-3 max-w-3xl text-sm leading-8">
+              NEXO nació de una idea simple: que nadie tenga que empezar su primer cosplay sin saber
+              a quién preguntar. Aquí se comparte lo que sabes, se aprende de otros y se celebra el
+              proceso tanto como el resultado.
+            </p>
+          </div>
+        </div>
+      </section>
+    </>
+  )
 }

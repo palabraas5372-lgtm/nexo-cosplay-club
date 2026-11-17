@@ -25,5 +25,5 @@ export async function obtenerTodos(recurso) {
 
 export async function obtenerUno(recurso, id) {
   const registros = await obtenerTodos(recurso)
-  return registros.find(registro => registro.id === id) ?? null
+  return registros.find((registro) => registro.id === id) ?? null
 }

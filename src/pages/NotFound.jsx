@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-import { ArrowLeft, SearchX } from "lucide-react";
+import { Link } from 'react-router-dom'
+import { ArrowLeft, SearchX } from 'lucide-react'
 export default function NotFound() {
   return (
     <section className="container-nexo flex min-h-[65vh] flex-col items-center justify-center py-20 text-center">
@@ -7,16 +7,14 @@ export default function NotFound() {
       <p className="font-display mt-4 text-[clamp(7rem,18vw,13rem)] font-extrabold leading-none tracking-[-.1em]">
         404<span className="text-coral">!</span>
       </p>
-      <h1 className="font-display mt-3 text-3xl font-extrabold">
-        Este rincón todavía no existe.
-      </h1>
+      <h1 className="font-display mt-3 text-3xl font-extrabold">Este rincón todavía no existe.</h1>
       <p className="mt-3 max-w-md text-sm leading-7 text-subtle">
-        Puede que hayas seguido una ruta equivocada. Pero todavía queda mucho
-        por descubrir en el club.
+        Puede que hayas seguido una ruta equivocada. Pero todavía queda mucho por descubrir en el
+        club.
       </p>
       <Link to="/" className="btn-primary mt-7">
         <ArrowLeft size={17} /> Volver al inicio
       </Link>
     </section>
-  );
+  )
 }
