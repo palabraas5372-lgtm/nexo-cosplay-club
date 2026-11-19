@@ -75,7 +75,7 @@ export default function Nosotros({ onJoin }) {
             ))}
           </div>
           <div className="mt-12 rounded-[25px] border-2 border-ink bg-sun p-7 sm:p-9">
-            <h2 className="font-display text-3xl font-extrabold">Hecho por fans, para fans.</h2>
+            <h2 className="font-display text-3xl font-extrabold">Crea · Aprende · Comparte</h2>
             <p className="mt-3 max-w-3xl text-sm leading-8">
               CosVibe nació de una idea simple: que nadie tenga que empezar su primer cosplay sin saber
               a quién preguntar. Aquí se comparte lo que sabes, se aprende de otros y se celebra el

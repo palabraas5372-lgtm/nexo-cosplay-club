@@ -82,7 +82,7 @@ export default function Footer() {
       </div>
       <div className="container-nexo mt-6 flex flex-wrap justify-between gap-3 text-xs text-white/65">
         <span>© {new Date().getFullYear()} CosVibe</span>
-        <span>Hecho por fans, para fans</span>
+        <span>Crea · Aprende · Comparte</span>
       </div>
     </footer>
   )
