@@ -51,8 +51,8 @@ export default function Contacto() {
               propuestas de colaboración y una comunidad respetuosa.
             </p>
             <p className="mt-5 rounded-xl border-2 border-ink bg-white p-4 text-sm font-bold">
-              El formulario valida los datos, pero no envía correos. En este avance no existe un
-              backend de mensajes.
+              Respondemos todos los mensajes en un plazo de 48 horas. ¡Gracias por ayudarnos a
+              crecer!
             </p>
           </div>
           <form noValidate onSubmit={submit} className="card-paper space-y-5 p-6 sm:p-9">
@@ -115,7 +115,7 @@ export default function Contacto() {
               </p>
             )}
             <button className="btn-primary" type="submit">
-              <Send size={17} /> Validar mensaje
+              <Send size={17} /> Enviar mensaje
             </button>
           </form>
         </div>

@@ -4,13 +4,13 @@ import ImageSlot from './ImageSlot.jsx'
 
 export default function Hero({ onJoin }) {
   return (
-    <section className="hero-grid overflow-hidden border-b-2 border-ink bg-paper py-12 sm:py-16 lg:py-20">
+    <section className="hero-grid overflow-hidden border-b-2 border-ink bg-paper py-10 sm:py-12 lg:py-12">
       <div className="container-nexo grid items-center gap-12 lg:grid-cols-[1.02fr_.98fr] lg:gap-16">
         <div className="relative z-10">
-          <div className="chip mb-7 bg-sun">
+          <div className="chip mb-5 bg-sun">
             <Star size={15} fill="currentColor" /> PARA FANS QUE HACEN COSAS
           </div>
-          <h1 className="font-display max-w-[640px] text-[clamp(3.4rem,7.3vw,6.7rem)] font-extrabold leading-[.93] tracking-[-.075em]">
+          <h1 className="font-display max-w-[640px] text-[clamp(3rem,5.6vw,5.2rem)] font-extrabold leading-[.93] tracking-[-.075em]">
             No lo hagas{' '}
             <span className="relative inline-block text-coral">
               solo.
@@ -31,11 +31,11 @@ export default function Hero({ onJoin }) {
             <br />
             Hazlo con tu <span className="text-ink">crew.</span>
           </h1>
-          <p className="mt-8 max-w-lg text-base leading-8 text-subtle sm:text-lg">
+          <p className="mt-6 max-w-lg text-base leading-8 text-subtle sm:text-lg">
             Ideas a medio hacer, pelucas imposibles, armaduras de cartón y amistades nuevas. Aquí
             caben todos los niveles de cosplay.
           </p>
-          <div className="mt-8 flex flex-wrap gap-4">
+          <div className="mt-7 flex flex-wrap gap-4">
             <Link to="/colaboraciones" className="btn-primary">
               Encuentra con quién crear <ArrowUpRight size={18} />
             </Link>
@@ -43,7 +43,7 @@ export default function Hero({ onJoin }) {
               Crear mi tarjeta <Users size={17} />
             </button>
           </div>
-          <div className="mt-9 flex flex-wrap gap-5 border-t-2 border-dashed border-ink/25 pt-5 text-sm font-bold">
+          <div className="mt-7 flex flex-wrap gap-5 border-t-2 border-dashed border-ink/25 pt-5 text-sm font-bold">
             <span className="flex items-center gap-2">
               <Scissors size={18} className="text-coral" /> Comparte procesos
             </span>
@@ -52,7 +52,7 @@ export default function Hero({ onJoin }) {
             </span>
           </div>
         </div>
-        <div className="relative mx-auto w-full max-w-[530px] pb-4 sm:px-5">
+        <div className="relative mx-auto w-full max-w-[460px] pb-4 sm:px-5">
           <div className="absolute -left-3 top-6 h-[83%] w-[93%] rotate-[-6deg] rounded-[30px] border-2 border-ink bg-mint" />
           <div className="absolute -right-2 top-1 h-[94%] w-[95%] rotate-[5deg] rounded-[30px] border-2 border-ink bg-sun" />
           <ImageSlot
