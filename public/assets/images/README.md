@@ -20,4 +20,4 @@ Comprime cada foto a menos de 300 KB (por ejemplo en squoosh.app) para que la p�
 Fotos de [Unsplash](https://unsplash.com) (licencia libre): Linli Xu (hero), Razgriz2520 / yogurt (mika), Anthony Duran (kai), MedievalMart (armadura-foam), Branden Skeli (e1), Matheus Oliveira (e2), Daniel Lincoln (e3), Hưng Nguyễn (ari), Caroline Eymond-Laritaz (leo), Hasbi Kurnia (sol), Punto Fotográfico (chaqueta-bordada), Erik Torres (retrato-cosplay), Donald Teel (primer-wig).
 Les Taylor (guias/convencion), Jaipreet Singh (guias/foam), Alan Morales (guias/primer-cosplay), Kashawn Hernandez (nosotros), JD Photos (rin), foto de cosplayer con fotógrafo (guias/foto: verificar autor en Unsplash).
 
-Galería (`galeria/n1` a `n7`), fotos de Unsplash: baljkann4-y1 (n1), Navy Medicine (n2), Muhammad Faiz Zulkeflee (n3), Branden Skeli (n4), Le Anh (n5), Lawrence Crayton (n6), Caroline Eymond-Laritaz (n7).
+Creadores nuevos (`creadores/n1`, `n3`, `n4`, `n5`, `n7`), fotos de Unsplash: baljkann4-y1 (n1), Navy Medicine (n2), Muhammad Faiz Zulkeflee (n3), Branden Skeli (n4), Le Anh (n5), Lawrence Crayton (n6), Caroline Eymond-Laritaz (n7).

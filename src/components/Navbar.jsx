@@ -11,13 +11,11 @@ import {
   CalendarDays,
   Palette,
   BookOpen,
-  Camera,
 } from 'lucide-react'
 
 const links = [
   { to: '/', name: 'Inicio', end: true, icon: Home },
   { to: '/comunidad', name: 'Creadores', icon: Users },
-  { to: '/galeria', name: 'Galería', icon: Camera },
   { to: '/colaboraciones', name: 'Colabora', icon: Handshake },
   { to: '/eventos', name: 'Agenda', icon: CalendarDays },
   { to: '/proyectos', name: 'Proyectos', icon: Palette },
@@ -48,7 +46,7 @@ export default function Navbar({ onJoin, member }) {
           </span>
         </span>
       </Link>
-      <div className="hidden items-center gap-1 xl:flex">
+      <div className="hidden items-center gap-1 lg:flex">
         {links.map((link) => (
           <NavLink key={link.to} end={link.end} to={link.to} className={navClass}>
             <link.icon size={15} strokeWidth={2.5} aria-hidden="true" />
@@ -56,7 +54,7 @@ export default function Navbar({ onJoin, member }) {
           </NavLink>
         ))}
       </div>
-      <button type="button" onClick={onJoin} className="btn-dark hidden shrink-0 xl:inline-flex">
+      <button type="button" onClick={onJoin} className="btn-dark hidden shrink-0 lg:inline-flex">
         {member ? 'Mi tarjeta' : 'Crear mi tarjeta'} <ArrowUpRight size={16} />
       </button>
       <button
@@ -65,14 +63,14 @@ export default function Navbar({ onJoin, member }) {
         aria-label={open ? 'Cerrar menú' : 'Abrir menú'}
         aria-expanded={open}
         aria-controls="nexo-mobile-nav"
-        className="flex h-11 w-11 items-center justify-center rounded-xl border-2 border-ink bg-white xl:hidden"
+        className="flex h-11 w-11 items-center justify-center rounded-xl border-2 border-ink bg-white lg:hidden"
       >
         {open ? <X size={22} /> : <Menu size={22} />}
       </button>
       {open && (
         <div
           id="nexo-mobile-nav"
-          className="absolute inset-x-0 top-full z-50 border-b-2 border-ink bg-paper px-4 py-4 shadow-xl xl:hidden"
+          className="absolute inset-x-0 top-full z-50 border-b-2 border-ink bg-paper px-4 py-4 shadow-xl lg:hidden"
         >
           <div className="mx-auto grid max-w-md gap-1">
             {links.map((link) => (

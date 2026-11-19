@@ -191,6 +191,86 @@
       "bio": "Hago personajes de videojuegos con maquillaje de fantasía y aprovecho la luz del atardecer para mis fotos.",
       "busca": "Personas para practicar maquillaje en vivo por videollamada.",
       "imagen": "/assets/images/creadores/ivy.jpg"
+    },
+    {
+      "id": "kira",
+      "nombre": "Kira",
+      "alias": "@kira.lava",
+      "ciudad": "Los Ángeles",
+      "rol": "Props",
+      "nivel": "Colaborando",
+      "habilidades": [
+        "Armaduras",
+        "LED",
+        "Foam EVA"
+      ],
+      "bio": "Hago armaduras de fantasía con luces LED escondidas para que parezcan lava encendida.",
+      "busca": "Alguien que sepa de electrónica para mi próximo traje.",
+      "imagen": "/assets/images/creadores/n4.jpg"
+    },
+    {
+      "id": "yuna",
+      "nombre": "Yuna y Daichi",
+      "alias": "@sierra.duo",
+      "ciudad": "Seúl",
+      "rol": "Maquillaje",
+      "nivel": "Compartiendo",
+      "habilidades": [
+        "Pelucas",
+        "Maquillaje",
+        "Cosplay en pareja"
+      ],
+      "bio": "Somos un dúo de cosplay: ella se encarga de pelucas y maquillaje, él de cascos y props.",
+      "busca": "Fotógrafos para una sesión de personajes de anime.",
+      "imagen": "/assets/images/creadores/n5.jpg"
+    },
+    {
+      "id": "aiko",
+      "nombre": "Aiko y Mina",
+      "alias": "@duelo.cos",
+      "ciudad": "Tokio",
+      "rol": "Fotografía",
+      "nivel": "Colaborando",
+      "habilidades": [
+        "Poses de acción",
+        "Sesiones en pareja",
+        "Props"
+      ],
+      "bio": "Preparamos sesiones de fotos con poses de combate entre personajes de distintos videojuegos.",
+      "busca": "Más cosplayers para escenas grupales de batalla.",
+      "imagen": "/assets/images/creadores/n3.jpg"
+    },
+    {
+      "id": "neko",
+      "nombre": "Neko Crew",
+      "alias": "@neko.crew",
+      "ciudad": "Ciudad de México",
+      "rol": "Principiante",
+      "nivel": "Mi primer cosplay",
+      "habilidades": [
+        "Closet cosplay",
+        "Orejas y colas",
+        "Grupos"
+      ],
+      "bio": "Somos un grupo de amigas que empezó con closet cosplay, orejas de gato y muchas ganas.",
+      "busca": "Consejos para coser nuestro primer traje completo.",
+      "imagen": "/assets/images/creadores/n1.jpg"
+    },
+    {
+      "id": "mando",
+      "nombre": "Teo",
+      "alias": "@mando.props",
+      "ciudad": "Madrid",
+      "rol": "Props",
+      "nivel": "Compartiendo",
+      "habilidades": [
+        "Cascos",
+        "Pintura envejecida",
+        "Impresión 3D"
+      ],
+      "bio": "Construyo cascos y armaduras de ciencia ficción y les doy un acabado gastado de batalla.",
+      "busca": "Gente para armar un grupo de personajes espaciales.",
+      "imagen": "/assets/images/creadores/n7.jpg"
     }
   ],
   "eventos": [

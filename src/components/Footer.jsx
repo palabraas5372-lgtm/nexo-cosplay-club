@@ -11,11 +11,9 @@ import {
   Mail,
   MapPin,
   MessageCircle,
-  Camera,
 } from 'lucide-react'
 const links = [
   ['Creadores', '/comunidad', Users],
-  ['Galería', '/galeria', Camera],
   ['Colaboraciones', '/colaboraciones', Handshake],
   ['Agenda', '/eventos', CalendarDays],
   ['Proyectos', '/proyectos', Palette],
