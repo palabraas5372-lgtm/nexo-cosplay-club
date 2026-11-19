@@ -8,3 +8,5 @@ dist/
 
 # API estática generada desde db.json
 public/api/
+
+Claude outputs/
