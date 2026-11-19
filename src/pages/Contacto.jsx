@@ -47,7 +47,7 @@ export default function Contacto() {
             <MessageSquareText size={36} />
             <h2 className="font-display mt-5 text-3xl font-extrabold">Dinos qué imaginas.</h2>
             <p className="mt-4 text-sm leading-8">
-              Queremos que NEXO sea útil: actividades para principiantes, procesos compartidos,
+              Queremos que CosVibe sea útil: actividades para principiantes, procesos compartidos,
               propuestas de colaboración y una comunidad respetuosa.
             </p>
             <p className="mt-5 rounded-xl border-2 border-ink bg-white p-4 text-sm font-bold">

@@ -1,4 +1,4 @@
-# NEXO! — Cosplay Club
+# CosVibe — Comunidad cosplay
 
 Prototipo universitario para **PC3, Avance N.º 1** de JavaScript Avanzado (UTP).
 

@@ -147,7 +147,7 @@ export default function Colaboraciones({
                 <p className="mt-4 text-sm text-subtle">
                   Consejo:{' '}
                   <button type="button" onClick={onJoin} className="font-bold text-coral underline">
-                    crea tu tarjeta NEXO
+                    crea tu tarjeta CosVibe
                   </button>{' '}
                   para firmar tu propuesta con un alias.
                 </p>

@@ -1,4 +1,4 @@
-# Importación a Figma — NEXO Cosplay Club
+# Importación a Figma — CosVibe
 
 1. Abre un archivo nuevo en Figma.
 2. Importa o arrastra los cuatro SVG incluidos en `design/figma/`:

@@ -17,6 +17,7 @@ import CollabCard from '../components/CollabCard.jsx'
 import ProjectCard from '../components/ProjectCard.jsx'
 import EstadoCarga from '../components/EstadoCarga.jsx'
 import { convocatorias, proyectos } from '../data/content.js'
+import { galeria } from '../data/galeria.js'
 import { obtenerTodos } from '../services/api.js'
 import { useApi } from '../hooks/useApi.js'
 
@@ -67,7 +68,7 @@ export default function Home({
                 Un hobby. <span className="text-coral">Muchas formas</span> de vivirlo.
               </>
             }
-            description="NEXO está pensado tanto para quien acaba de elegir su primer personaje como para quien lleva años construyendo trajes."
+            description="CosVibe está pensado tanto para quien acaba de elegir su primer personaje como para quien lleva años construyendo trajes."
           />
           <div className="grid gap-5 md:grid-cols-3">
             {pilares.map((p) => (
@@ -144,6 +145,40 @@ export default function Home({
               texto="Cargando creadores..."
             />
           )}
+        </div>
+      </section>
+      <section className="section-space bg-white">
+        <div className="container-nexo">
+          <SectionHeading
+            eyebrow="Galería de la comunidad"
+            title={
+              <>
+                Personajes que <span className="text-coral">cobran vida.</span>
+              </>
+            }
+            description="Anime, videojuegos, cine y fantasía: así se ven los trajes de la comunidad CosVibe."
+            to="/galeria"
+            linkText="Ver galería completa"
+          />
+          <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
+            {galeria.slice(0, 8).map((f) => (
+              <Link
+                key={f.id}
+                to="/galeria"
+                className="card-paper card-lift group relative aspect-[3/4] overflow-hidden"
+              >
+                <img
+                  src={f.src}
+                  alt={f.alt}
+                  loading="lazy"
+                  className="h-full w-full object-cover"
+                />
+                <span className="absolute inset-x-0 bottom-0 bg-ink/80 px-3 py-2 text-xs font-extrabold text-white">
+                  {f.autor}
+                </span>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
       <section className="section-space border-y-2 border-ink bg-sun">

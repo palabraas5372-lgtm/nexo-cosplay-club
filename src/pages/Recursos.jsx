@@ -1,26 +1,28 @@
 import { useState } from 'react'
-import { BookOpen, ChevronDown, ChevronUp, CheckCircle2 } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import { ArrowUpRight, BookOpen, Clock3, ListChecks } from 'lucide-react'
 import PageIntro from '../components/PageIntro.jsx'
 import ImageSlot from '../components/ImageSlot.jsx'
-import { recursos } from '../data/content.js'
+import { guias } from '../data/guias.js'
+
 export default function Recursos() {
-  const [opened, setOpened] = useState('primer-cosplay')
   const [category, setCategory] = useState('Todos')
-  const items = recursos.filter((r) => category === 'Todos' || r.categoria === category)
+  const items = guias.filter((g) => category === 'Todos' || g.categoria === category)
   return (
     <>
       <PageIntro
         eyebrow="Aprender juntos"
         title="Nadie nace sabiendo hacer props."
-        description="Ideas cortas y útiles para dar tus primeros pasos, probar técnicas y disfrutar el proceso de aprender cosplay."
+        description="Guías paso a paso para armar tu cosplay: materiales, técnicas, consejos y los errores que conviene evitar."
         bg="bg-mint"
       />
       <section className="section-space">
         <div className="container-nexo">
           <div className="mb-7 flex flex-wrap gap-2">
-            {['Todos', ...new Set(recursos.map((r) => r.categoria))].map((c) => (
+            {['Todos', ...new Set(guias.map((g) => g.categoria))].map((c) => (
               <button
                 key={c}
+                type="button"
                 aria-pressed={category === c}
                 onClick={() => setCategory(c)}
                 className="filter-chip"
@@ -29,57 +31,39 @@ export default function Recursos() {
               </button>
             ))}
           </div>
-          <div className="grid gap-5 lg:grid-cols-2">
-            {items.map((r) => (
-              <article key={r.id} className="card-paper overflow-hidden">
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {items.map((g) => (
+              <article key={g.id} className="card-paper card-lift flex flex-col overflow-hidden">
                 <ImageSlot
                   tipo="proyecto"
-                  src={`/assets/images/guias/${r.id}.jpg`}
-                  alt={`Foto de la guía ${r.titulo}`}
-                  className="aspect-[16/7] border-b-2 border-ink"
+                  src={g.imagen}
+                  alt={`Foto de la guía ${g.titulo}`}
+                  className="aspect-[16/10] border-b-2 border-ink"
                 />
-                <button
-                  type="button"
-                  aria-expanded={opened === r.id}
-                  onClick={() => setOpened((prev) => (prev === r.id ? '' : r.id))}
-                  className="flex w-full items-start justify-between gap-4 p-6 text-left"
-                >
-                  <div>
-                    <span className="chip bg-sun">
-                      <BookOpen size={15} />
-                      {r.categoria}
+                <div className="flex flex-1 flex-col p-6">
+                  <span className="chip w-fit bg-sun">
+                    <BookOpen size={15} />
+                    {g.categoria}
+                  </span>
+                  <h2 className="font-display mt-4 text-2xl font-extrabold leading-tight">
+                    {g.titulo}
+                  </h2>
+                  <p className="mt-2 flex-1 text-sm leading-7 text-subtle">{g.descripcion}</p>
+                  <div className="mt-4 flex flex-wrap gap-4 text-xs font-bold">
+                    <span className="flex items-center gap-1">
+                      <ListChecks size={14} /> {g.pasos.length} pasos
                     </span>
-                    <h2 className="font-display mt-4 text-2xl font-extrabold">{r.titulo}</h2>
-                    <p className="mt-2 text-sm leading-7 text-subtle">{r.descripcion}</p>
-                    <p className="mt-3 text-xs font-extrabold text-coral">
-                      {r.dificultad} · Lectura {r.tiempo}
-                    </p>
+                    <span className="flex items-center gap-1">
+                      <Clock3 size={14} /> {g.duracion}
+                    </span>
+                    <span className="text-coral">{g.dificultad}</span>
                   </div>
-                  {opened === r.id ? (
-                    <ChevronUp className="shrink-0" />
-                  ) : (
-                    <ChevronDown className="shrink-0" />
-                  )}
-                </button>
-                {opened === r.id && (
-                  <ol className="border-t-2 border-dashed border-ink/25 bg-cream/55 p-6">
-                    {r.pasos.map((s, i) => (
-                      <li key={s} className="mb-4 flex gap-3 last:mb-0">
-                        <CheckCircle2 className="mt-1 shrink-0 text-coral" size={20} />
-                        <span className="text-sm leading-7">
-                          <strong>{i + 1}.</strong> {s}
-                        </span>
-                      </li>
-                    ))}
-                  </ol>
-                )}
+                  <Link to={`/recursos/${g.id}`} className="btn-primary mt-5">
+                    Leer guía completa <ArrowUpRight size={16} />
+                  </Link>
+                </div>
               </article>
             ))}
-          </div>
-          <div className="mt-10 rounded-2xl bg-sky/40 p-6 text-sm leading-7">
-            <strong>Nota de comunidad:</strong> estas guías son consejos generales para
-            principiantes. Si alguna técnica implica herramientas cortantes, calor o sustancias,
-            sigue las instrucciones de seguridad del fabricante y busca orientación adecuada.
           </div>
         </div>
       </section>

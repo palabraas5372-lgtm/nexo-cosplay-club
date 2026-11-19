@@ -11,14 +11,16 @@ import {
   Mail,
   MapPin,
   MessageCircle,
+  Camera,
 } from 'lucide-react'
 const links = [
   ['Creadores', '/comunidad', Users],
+  ['Galería', '/galeria', Camera],
   ['Colaboraciones', '/colaboraciones', Handshake],
   ['Agenda', '/eventos', CalendarDays],
   ['Proyectos', '/proyectos', Palette],
   ['Guías', '/recursos', BookOpen],
-  ['Sobre NEXO', '/nosotros', Info],
+  ['Sobre CosVibe', '/nosotros', Info],
   ['Contacto', '/contacto', MessageCircle],
 ]
 export default function Footer() {
@@ -31,7 +33,9 @@ export default function Footer() {
             className="font-display inline-flex items-center gap-2 text-4xl font-extrabold tracking-[-.08em]"
           >
             <Sparkles size={31} className="text-sun" />
-            NEXO<span className="text-coral">!</span>
+            <span>
+              Cos<span className="text-coral">Vibe</span>
+            </span>
           </Link>
           <p className="mt-5 max-w-sm text-sm leading-7 text-white/75">
             Cosplay no es hacerlo perfecto. Es crear, compartir lo que sabes y encontrar a tu crew.
@@ -41,7 +45,7 @@ export default function Footer() {
           </span>
         </div>
         <div>
-          <h3 className="font-display mb-4 text-lg font-extrabold">Explora NEXO</h3>
+          <h3 className="font-display mb-4 text-lg font-extrabold">Explora CosVibe</h3>
           <div className="grid grid-cols-2 gap-x-3 gap-y-3">
             {links.map(([name, path, Icon]) => (
               <Link
@@ -63,7 +67,7 @@ export default function Footer() {
           <ul className="mt-4 grid gap-2 text-sm text-white/80">
             <li className="flex items-center gap-2">
               <Mail size={15} className="text-sun" aria-hidden="true" />
-              hola@nexocosplay.pe
+              hola@cosvibe.club
             </li>
             <li className="flex items-center gap-2">
               <MapPin size={15} className="text-sun" aria-hidden="true" />
@@ -79,7 +83,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="container-nexo mt-6 flex flex-wrap justify-between gap-3 text-xs text-white/65">
-        <span>© {new Date().getFullYear()} NEXO Cosplay Club</span>
+        <span>© {new Date().getFullYear()} CosVibe</span>
         <span>Hecho por fans, para fans</span>
       </div>
     </footer>

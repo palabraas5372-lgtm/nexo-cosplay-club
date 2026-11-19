@@ -27,12 +27,12 @@ export default function Nosotros({ onJoin }) {
       <section className="section-space border-b-2 border-ink bg-sky/50">
         <div className="container-nexo grid items-center gap-9 lg:grid-cols-[1fr_.9fr]">
           <div>
-            <span className="kicker">Por qué existe NEXO</span>
+            <span className="kicker">Por qué existe CosVibe</span>
             <h1 className="font-display mt-5 text-5xl font-extrabold leading-[1.03] tracking-[-.06em] sm:text-6xl">
               No es un concurso de quién hace el mejor traje.
             </h1>
             <p className="mt-6 max-w-xl text-base leading-8">
-              NEXO es un club digital que busca facilitar algo simple: encontrar compañía, recursos
+              CosVibe es un club digital que busca facilitar algo simple: encontrar compañía, recursos
               y oportunidades para hacer cosplay. La idea nació de ver que muchas personas comienzan
               sin saber a quién preguntar.
             </p>
@@ -77,7 +77,7 @@ export default function Nosotros({ onJoin }) {
           <div className="mt-12 rounded-[25px] border-2 border-ink bg-sun p-7 sm:p-9">
             <h2 className="font-display text-3xl font-extrabold">Hecho por fans, para fans.</h2>
             <p className="mt-3 max-w-3xl text-sm leading-8">
-              NEXO nació de una idea simple: que nadie tenga que empezar su primer cosplay sin saber
+              CosVibe nació de una idea simple: que nadie tenga que empezar su primer cosplay sin saber
               a quién preguntar. Aquí se comparte lo que sabes, se aprende de otros y se celebra el
               proceso tanto como el resultado.
             </p>

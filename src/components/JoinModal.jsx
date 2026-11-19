@@ -165,7 +165,7 @@ export default function JoinModal({ open, onClose, member, onSave }) {
         className="card-paper w-full max-w-2xl bg-paper p-6 sm:p-9"
       >
         <div className="flex items-center justify-between">
-          <span className="kicker">Tu lugar en NEXO</span>
+          <span className="kicker">Tu lugar en CosVibe</span>
           <button
             onClick={onClose}
             aria-label="Cerrar"
@@ -189,7 +189,7 @@ export default function JoinModal({ open, onClose, member, onSave }) {
                 />
               )}
               <div>
-                <p className="text-xs font-extrabold uppercase tracking-widest">Mi tarjeta NEXO</p>
+                <p className="text-xs font-extrabold uppercase tracking-widest">Mi tarjeta CosVibe</p>
                 <strong className="font-display mt-2 block text-3xl font-extrabold">
                   {member.nombre}
                 </strong>
@@ -321,7 +321,7 @@ export default function JoinModal({ open, onClose, member, onSave }) {
                   {form.bio.length}/200
                 </span>
               </Campo>
-              <Campo label="¿Qué buscas en NEXO?" error={errores.busca} className="sm:col-span-2">
+              <Campo label="¿Qué buscas en CosVibe?" error={errores.busca} className="sm:col-span-2">
                 <input
                   className="form-control"
                   value={form.busca}

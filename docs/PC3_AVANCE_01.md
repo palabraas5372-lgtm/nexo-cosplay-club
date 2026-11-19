@@ -1,7 +1,7 @@
-# PC3 — Avance N.º 1: NEXO Cosplay Club
+# PC3 — Avance N.º 1: CosVibe
 
 **Curso:** JavaScript Avanzado — UTP 2026-2  
-**Proyecto:** NEXO Cosplay Club  
+**Proyecto:** CosVibe  
 **Tecnologías iniciales:** React, Vite y Tailwind CSS  
 **Integrantes:** [Completar con el equipo]  
 **Estado:** Prototipo académico. Perfiles, proyectos, convocatorias y actividades ficticios.
@@ -10,11 +10,11 @@
 
 ### Nombre del proyecto
 
-**NEXO Cosplay Club** — *No lo hagas solo. Hazlo con tu crew.*
+**CosVibe** — *No lo hagas solo. Hazlo con tu crew.*
 
 ### Descripción y propósito
 
-NEXO es una propuesta de comunidad digital para personas interesadas en el cosplay: quienes están creando su primer traje, quienes cosen, fabrican accesorios, maquillan, toman fotografías o buscan amigos con esa misma afición. En lugar de enfocarse en vender productos, el sitio busca apoyar la parte social y creativa del hobby.
+CosVibe es una propuesta de comunidad digital para personas interesadas en el cosplay: quienes están creando su primer traje, quienes cosen, fabrican accesorios, maquillan, toman fotografías o buscan amigos con esa misma afición. En lugar de enfocarse en vender productos, el sitio busca apoyar la parte social y creativa del hobby.
 
 Un visitante puede consultar perfiles por especialidad y ciudad, encontrar propuestas para colaborar, revisar el proceso de proyectos y explorar una agenda de actividades. También cuenta con guías sencillas para empezar. Este primer avance muestra datos ficticios para probar la navegación y la interacción; todavía no existe una comunidad online real.
 
@@ -24,7 +24,7 @@ Principalmente estudiantes, jóvenes y adultos interesados en el cosplay, tanto 
 
 ### Necesidad a satisfacer
 
-La información sobre cosplay suele estar repartida entre perfiles, publicaciones y grupos. Alguien que recién empieza puede tener dificultades para encontrar consejos, conocer personas de su ciudad o pedir ayuda para un proyecto concreto. NEXO plantea reunir esos caminos de forma clara.
+La información sobre cosplay suele estar repartida entre perfiles, publicaciones y grupos. Alguien que recién empieza puede tener dificultades para encontrar consejos, conocer personas de su ciudad o pedir ayuda para un proyecto concreto. CosVibe plantea reunir esos caminos de forma clara.
 
 ### Objetivo general
 
@@ -68,12 +68,12 @@ Diseñar e implementar un prototipo web responsive de comunidad cosplay que faci
 
 **Inicio · Creadores · Colabora · Agenda · Proyectos · Guías**. El botón «Crear mi tarjeta» abre un formulario local. «Nosotros» y «Contacto» se incluyen en el pie de página para no saturar el menú principal.
 
-Se propone este orden porque responde a las preguntas del usuario: ¿qué es NEXO?, ¿quiénes participan?, ¿qué puedo hacer con otras personas?, ¿qué actividades existen?, ¿qué puedo aprender?
+Se propone este orden porque responde a las preguntas del usuario: ¿qué es CosVibe?, ¿quiénes participan?, ¿qué puedo hacer con otras personas?, ¿qué actividades existen?, ¿qué puedo aprender?
 
 ### Sitemap
 
 ```text
-NEXO Cosplay Club
+CosVibe
 ├── Inicio (/)
 │   ├── Header y navegación
 │   ├── Hero / propuesta de valor
@@ -149,10 +149,10 @@ Archivos `wireframe-home-desktop.svg` y `wireframe-home-mobile.svg` incluidos en
 
 ### Estructura del Home
 
-1. **Header + Navbar:** marca NEXO, navegación responsive y botón para crear la tarjeta local.
+1. **Header + Navbar:** marca CosVibe, navegación responsive y botón para crear la tarjeta local.
 2. **Hero:** mensaje «No lo hagas solo. Hazlo con tu crew», fotografía reservada y dos acciones.
 3. **Contenido principal:** tres beneficios, tablero de colaboración, creadores, proyecto destacado y agenda.
-4. **CTA:** invitación a explorar guías o crear una tarjeta NEXO.
+4. **CTA:** invitación a explorar guías o crear una tarjeta CosVibe.
 5. **Footer:** enlaces secundarios, información y carácter académico del proyecto.
 
 ### Componentes React implementados

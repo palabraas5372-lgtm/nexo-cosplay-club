@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Routes, Route, Navigate } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import { useLocalStorage } from './hooks/useLocalStorage.js'
 import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx'
@@ -13,6 +13,8 @@ import Eventos from './pages/Eventos.jsx'
 import Proyectos from './pages/Proyectos.jsx'
 import ProjectDetail from './pages/ProjectDetail.jsx'
 import Recursos from './pages/Recursos.jsx'
+import GuiaDetalle from './pages/GuiaDetalle.jsx'
+import Galeria from './pages/Galeria.jsx'
 import Nosotros from './pages/Nosotros.jsx'
 import Contacto from './pages/Contacto.jsx'
 import NotFound from './pages/NotFound.jsx'
@@ -93,8 +95,9 @@ export default function App() {
           />
           <Route path="/proyectos" element={<Proyectos />} />
           <Route path="/proyectos/:id" element={<ProjectDetail />} />
-          <Route path="/galeria" element={<Navigate to="/proyectos" replace />} />
+          <Route path="/galeria" element={<Galeria />} />
           <Route path="/recursos" element={<Recursos />} />
+          <Route path="/recursos/:id" element={<GuiaDetalle />} />
           <Route path="/nosotros" element={<Nosotros onJoin={onJoin} />} />
           <Route path="/contacto" element={<Contacto />} />
           <Route path="*" element={<NotFound />} />
